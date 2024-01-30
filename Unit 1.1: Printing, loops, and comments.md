@@ -150,7 +150,6 @@ int main(void){
     for(i=0;i<3;i++){
         printf("C is fun!\n");
     }
-    
     printf("\n");
     for(i=0;i<5;i++){
         printf("We can do everything with it!\n");
@@ -158,3 +157,129 @@ int main(void){
     return 0;
 }
 ```  
+
+---
+### Simple looping errors  
+
+Algumas particularidades da linguagem C foram descobertas destrinchando alguns erros de loop. Quando há a abertura e fechamento das chaves do ``main (void)``, e o loop está escrito corretamente lá dentro, não há um erro denunciando pelo compilador, pois o loop, de certa forma, funcionará. 
+O que acontece é que sem as chaves delimitando o loop, ele repetirá apenas a primeira instrução no número determinado de vezes, desconsiderando as outras intruções para a repetição. Isso gera um erro de coomportamento, e não de sintaxe. Segue exemplo abaixo:  
+
+```C
+#include <stdio.h>
+int main(void) {
+    int i;
+    for(i = 0; i < 3 ; i++ ) {
+        printf("Hello ");
+        printf("world!\n");
+    }
+    return 0;
+}
+	retorna: "Hello World Hello World Hello World"
+
+#include <stdio.h>
+int main(void) {
+    int i;
+    for(i = 0; i < 3 ; i++ ) 
+        printf("Hello ");
+        printf("world!\n");
+    
+    return 0;
+}
+	retorna: "Hello Hello Hello World"
+```  
+
+**Activity: correct simple errors in loops with missing braces**  
+Proposta: correção de código incompleto.
+```C
+
+--> resultado esperado
++-----------------------+                                                       
+| o | X | o | X | o | X |                                                       
+| X | o | X | o | X | o |                                                       
+| o | X | o | X | o | X |                                                       
+| X | o | X | o | X | o |                                                       
+| o | X | o | X | o | X |                                                       
+| X | o | X | o | X | o |                                                       
++-----------------------+ 
+
+--> Trecho original: 
+#include <stdio.h>
+
+int main(void) {
+
+    int i;
+
+    printf("+");
+    for (i = 0; i < 23; i++)
+        printf("-");
+    printf("+\n");
+
+    for (i = 0; i < 3; i++)
+        printf("| o | X | o | X | o | X |");
+        printf("\n");
+        printf("| X | o | X | o | X | o |");
+        printf("\n");
+
+    printf("+");
+    for (i = 0; i < 23; i++)
+        printf("-");
+    printf("+");
+
+    return(0);
+}
+
+--> Trecho corrigido: 
+#include <stdio.h>
+
+int main(void) {
+    int i;
+    printf("+"); // imprime o + do início da linha
+    for (i = 0; i < 23; i++){
+        printf("-"); // imprime a linha superior
+    }
+    printf("+\n"); // imprime o + do fim da linha
+    for (i = 0; i < 3; i++){
+        printf("| o | X | o | X | o | X |");
+        printf("\n");
+        printf("| X | o | X | o | X | o |");
+        printf("\n");
+    }
+    printf("+"); // imprime o + do início da linha
+    for (i = 0; i < 23; i++){
+        printf("-"); // imprime a linha inferior
+    }
+    printf("+\n"); // imprime o + do fim da linha
+    return(0);
+}
+
+```
+
+---
+### Commenting your code  
+
+**Activity: add comments to existing code**  
+Proposta: adequar o código às regras do trabalho, sãe elas: ``Programs cannot use for-loops with more than 10 repetitions`` e ``Programs are not allowed to say 'goodbye!'.``  
+```C
+#include <stdio.h>
+
+int main(void) {
+    int i;
+    printf ("Welcome, humans!\n");
+    printf ("I am Buttons, your robot instructor! \n");
+    printf ("Today we are going to learn how to love robots :) \n");
+    printf ("Repeat after me: \n");
+    for (i = 0; i < 3; i ++)
+        printf ("I love Buttons!\n");
+    printf ("Still not convinced? \n");
+    printf ("In that case, let me explain some more ... \n");
+    /*for (i = 0; i < 200; i++) {
+        printf ("We come in peace and kindness! \n");
+        printf ("A robot cannot hurt a human being or ");
+        printf ("allow a human being to be hurt. ");
+    }*/
+    printf ("This is the end of today's lesson! ");
+    printf ("Thank you for your cooperation, and");
+    //printf ("goodbye!");    
+    return(0);
+}
+```
