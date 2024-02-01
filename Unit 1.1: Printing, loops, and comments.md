@@ -283,3 +283,90 @@ int main(void) {
     return(0);
 }
 ```
+
+---
+### Structure of a simple C program  
+
+```C
+--> estrutura de um programa em C simples
+// preprocessor directive 
+#include <stdio.h>
+
+// main function
+int main(void) {
+    // variable declarations
+    int i = 0;
+    
+    // executable statements
+    for(i = 0; i < 3 ; i++) {
+        printf("Blah");
+        printf("Bleh");
+        printf("Blih "); 
+    }
+    
+    // return statement
+    return 0;
+}
+```
+
+**Activity: put lines in the correct order**  
+Proposta: Organizar o código na ordem correta.  
+
+```C
+--> Código original
+    printf("I ");
+    for(i = 0; i < 3 ; i++) {
+        printf("love ");
+    }
+    return(0);
+    printf("programming!");
+    #include <stdio.h>
+}
+int main(void){
+    int i;
+
+--> Código corrigido (deixando de delimitar o loop for)
+    // preprocessor directive 
+    #include <stdio.h>
+    
+    // main function
+    int main(void){
+    // variable declarations
+    int i;    
+    // executable statements
+    printf("I ");
+    for(i = 0; i < 3 ; i++) 
+        printf("love ");
+        printf("programming!");
+    
+    // return statement
+    return(0);
+
+(delimitando o loop for)
+    // preprocessor directive 
+    #include <stdio.h>
+    
+    // main function
+    int main(void){
+    // variable declarations
+    int i;    
+    // executable statements
+    printf("I ");
+    for(i = 0; i < 3 ; i++){
+        printf("love ");
+    } 
+        printf("programming!");
+    
+    // return statement
+    return(0);
+}
+```
+
+---
+Retomando conhecimentos: 😎  
+
+-> modificar o programa "Hello World" para criar um programa que imprime texto e caracteres especiais;  
+-> criar programas C que utilizam um ou mais loops para repetir uma ou mais instruções em um determinado número de vezes;  
+-> explicar o programa com comentários;  
+-> usar comentários de diferentes formas;  
+-> identificar e rotular partes do programa, como função principa;  
