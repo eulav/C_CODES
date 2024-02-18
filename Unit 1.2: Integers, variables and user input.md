@@ -1,16 +1,6 @@
-template
----
-###
-**Activity: **
-```C
-```
-addition substraction, mutiplication and parentheses
-plus +
-minus -
-times/multiplies *
+# Unit 1.2: Integers, variables and user input 
 
----
-###  Printing and computing with integ  
+###  Printing and computing with integers  
 O tópico fala sobre a formatação de números inteiros utilizando um especificador de formato ``%d``. Há um formato específico para cada tipo de dados. Também é abordado sobre cálculos simples, como a soma, subtração, multiplicação e operações com parenteses. A divisão será vista depois, uma vez que é um caso especial em C.  
 artigo: https://www.freecodecamp.org/news/format-specifiers-in-c/  
  
