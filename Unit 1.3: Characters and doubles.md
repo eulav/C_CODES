@@ -1,10 +1,5 @@
----
-###
-**Activity: **
-```C
-```
+# Unit 1.3: Characters and doubles
 
----  
 ### Using characters  
 Este tópico ensina-nos a utilizar a variável ``char``, junto com seu especificador de formato ``%c``.  
 
@@ -261,12 +256,12 @@ int main (void){
 }
 ```   
 
-📌 Retomando conhecimentos: 
--> aprendi a distinguir variáveis tipo int, double e char.  
--> declarar e atribuir valor à variáveis tipo double e char.  
--> usar os especificadores corretos para imprimir e ler dados.  
--> compreender os comportamentos da divisão em C.
--> fazer a conversão(cast) e explicar sua importância.
+📌 Retomando conhecimentos:   
+-> aprendi a distinguir variáveis tipo int, double e char.    
+-> declarar e atribuir valor à variáveis tipo double e char.    
+-> usar os especificadores corretos para imprimir e ler dados.    
+-> compreender os comportamentos da divisão em C.  
+-> fazer a conversão(cast) e explicar sua importância.  
 -> criar programas em C que envolvem input de usuários, inteiros e número decimais.
 
 
