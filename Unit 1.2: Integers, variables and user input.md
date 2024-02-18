@@ -40,7 +40,8 @@ A atividade do tópico foi um questionário.
 
 
 --- 
-### Repeating instructions with variables    **Activity: imprimir a tabuada de 8**  
+### Repeating instructions with variables    
+**Activity: imprimir a tabuada de 8**  
 ```C
 #include <stdio.h>
     
